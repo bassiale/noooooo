@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}Live Data{% endblock %}
+{% block bo1 %}class="nav-link active"{% endblock%}
 {% block content %}
 <link
 rel=
@@ -18,29 +19,77 @@ type="text/javascript"
 
 <script src=
 "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
-<div class="container-fluid" ></div>
-<h1>qui ci staranno tutti i grafici in tempo reale</h1>
+<div class="container-fluid" >
+<h1>Qui vengono pubblicati i dati in tempo reale</h1>
 
 
 
-    <div class="container-md">
+    <div class="container-md"
+    >
       <div>
-        <canvas id="myChart"></canvas>
+        <canvas id="temperatura"></canvas>
       </div>
     </div>
 </div>
+    <div class="container-md">
+      <div>
+        <canvas id="pressione"></canvas>
+      </div>
+    </div>
+</div>
+    <div class="container-md">
+      <div>
+        <canvas id="altitudine"></canvas>
+      </div>
+    </div>
+</div>
+</div>
 
   <script type="text/javascript">
-    var ctx = document.getElementById("myChart").getContext("2d");
+    var ctx = document.getElementById("temperatura").getContext("2d");
     var myChart = new Chart(ctx, {
       type: "line",
       data: {
-        labels: {{pressures}},
+        labels: {{ids}},
         datasets: [
           {
             
             label: "temperatura",
             data: {{temperatures}},
+            backgroundColor: "rgba(2, 13, 255,0.7)",
+          },
+        ],
+      },
+    });
+  </script>
+  <script type="text/javascript">
+    var ctx = document.getElementById("pressione").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: {{ids}},
+        datasets: [
+          {
+            
+            label: "pressione",
+            data: {{pressures}},
+            backgroundColor: "rgba(2, 13, 255,0.7)",
+          },
+        ],
+      },
+    });
+  </script>
+  <script type="text/javascript">
+    var ctx = document.getElementById("altitudine").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: {{ids}},
+        datasets: [
+          {
+            
+            label: "altitudine",
+            data: {{altitudes}},
             backgroundColor: "rgba(2, 13, 255,0.7)",
           },
         ],

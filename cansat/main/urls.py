@@ -5,4 +5,5 @@ urlpatterns = [
     path("", views.index, name='index'),
     path("live_data", views.live_data, name='live_data'),
     path("no/<int:temperature>/<int:pressure>/<int:altitude>", views.no, name='no'),
+    path("about_us", views.about_us, name="about_us"),
 ]

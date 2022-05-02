@@ -9,7 +9,7 @@
     <title>{% block title %}{% endblock %}</title>
 
 </head>
-<body>
+<body >
     {% block navbar %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -21,10 +21,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Home</a>
+                <a class="nav-link " {% block bo %}{% endblock%}href="http://127.0.0.1:8000/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://127.0.0.1:8000/live_data">Live Data</a>
+                <a class="nav-link" {% block bo1 %}{% endblock%}href="http://127.0.0.1:8000/live_data">Live Data</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" {% block bo2 %}{% endblock%}href="http://127.0.0.1:8000/about_us">About Us</a>
               </li>
             </ul>
           </div>

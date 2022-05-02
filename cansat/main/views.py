@@ -26,3 +26,8 @@ def no(request, temperature, pressure, altitude):
     a = bmp_data(temperature=temperature, pressure=pressure, altitude=altitude)
     a.save()
     return HttpResponse('dati aggiunti al database')
+
+def about_us(request):
+    template = loader.get_template('main/about_us.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
