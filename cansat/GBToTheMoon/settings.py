@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^v7&^ldo!7v+5-$@!@!7y0n(57g*ih2xi5h$m-dbv^#4ypst#!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gbtothemoon.pythonanywhere.com']
 
 
 # Application definition
@@ -117,9 +117,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/home/GBToTheMoon/noooooo/cansat/main/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR/ "main" / "static",
     '/var/www/static/',
 ]
 

@@ -7,27 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-
+    <style>
+    body, table, td, p, span, div {
+        font-family: 'Avenir'; font-size: 20px;
+        }
+    </style>
 </head>
 <body >
     {% block navbar %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand"><img class="d-inline-block align-center"src="{% static 'main/logo-trasparente.png' %}" alt="no" height="70" width="70"/></a>
-          <a class="navbar-brand"> GiBì to the moon</a>
+          <a class="navbar-brand"><img class="d-inline-block align-center" src="{% static 'gbtothemoon.png' %}" alt="GB to the Moon" height="70" /></a>
+          <!-- <a class="navbar-brand">GiBì to the Moon</a> -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link " {% block bo %}{% endblock%}href="http://127.0.0.1:8000/">Home</a>
+                <a class="nav-link " {% block bo %}{% endblock%}href="/">CanSat Project</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" {% block bo1 %}{% endblock%}href="http://127.0.0.1:8000/live_data">Live Data</a>
+                <a class="nav-link" {% block bo1 %}{% endblock%}href="/live_data">Live Data</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" {% block bo2 %}{% endblock%}href="http://127.0.0.1:8000/about_us">About Us</a>
+                <a class="nav-link" {% block bo2 %}{% endblock%}href="/about_us">About Us</a>
               </li>
             </ul>
           </div>

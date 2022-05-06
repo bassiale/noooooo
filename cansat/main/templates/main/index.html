@@ -3,7 +3,49 @@
 {% block bo %}class="nav-link active"{% endblock%}
 {%block title%}Home{% endblock %}
 {% block content %}
-<!-- <h1>FAI SCHIFO E PUZZI</h1> -->
-<h1>home page</h1>
+
+<br />
+<br />
+<div align="center"><h1>Il Team CanSat del Liceo GB Grassi</h1></div>
+<br />
+<table width="1200" align="center" cellpadding="10">
+    <tr>
+        <td width="70%">
+            <h2>Cos'è il CanSat</h2>
+            <b>CanSat</b> è un'iniziativa dell'<a href="https://www.esa.int/" target="_blank">European Space Agency</a> che sfida gli studenti di tutta Europa a costruire e lanciare un mini satellite delle dimensioni di una lattina.<br />
+            La fase italiana, organizzata dall'<a href="https://www.asi.it/" target="_blank">Agenzia Spaziale Italiana</a>, si svolgerà dal 6 all'8 maggio a Molinella, vicino a Bologna.<br />
+            La sfida per gli studenti è quella di adattare tutti i principali sottosistemi presenti in un satellite, come alimentazione, sensori e un sistema di comunicazione, nel volume e nella forma di una lattina per bibite. Il CanSat viene quindi portato fino a un'altitudine di circa 1000 metri. Poi inizia la sua missione: l'esecuzione di un esperimento scientifico e/o una dimostrazione tecnologica, il raggiungimento di un atterraggio sicuro e l'analisi dei dati raccolti.
+        </td>
+        <td width="30%" align="center" valign="middle"><img src="cansat.png" width="300" alt="Logo CanSat 2022"></td>
+    </tr>
+</table>
+<br />
+<table width="1200" align="center" cellpadding="10">
+    <tr>
+        <td width="30%" align="center" valign="middle"><img src="logo-trasparente.png" width="300" alt="Logo GB To The Moon"></td>
+         <td width="70%">
+            <h2>Perché GB to the Moon</h2>
+            L'esistenza della competizione è stata scoperta da un componente del team, Alessandro Bassi, e si è subito creato un team. Abbiamo trovato il progetto molto interessante e particolare, oltre che intrigante e fuori dagli schemi. <b>GB to the Moon</b> è dunque nato dalla volontà di tutti noi di mettersi in gioco verso orizzonti nuovi e inizialmente poco conosciuti. Vogliamo ringraziare il nostro istituto, il <a href="https://www.gbgrassi.edu.it/" target="_blank">Liceo Scientifico G.B. Grassi</a> che, oltre ad aver finanziato il progetto, ci ha permesso di lavorare in ambienti adeguati come il laboratorio di fisica e il laboratorio di informatica, e i professori Minervini e Scagliotti, che ci hanno accompagnato in questo progetto dall’inizio alla fine.<br />
+            Un caloroso grazie anche a Elena Citterio per la realizzazione del nostro logo.
+        </td>
+    </tr>
+</table>
+<br />
+<table width="1200" align="center" cellpadding="10">
+    <tr>
+        <td colspan="5"><h2>I componenti elettronici utilizzati</h2></td>
+    </tr>
+    <tr>
+        <td width="20%" valign="top"><img src="SP-32.png" width="200" alt="ESP 32"><br><span style="font-size: 16px; line-height: normal;"><b>ESP 32</b><br />Una scheda di sviluppo con due core (permette il multitasking) e di dimensioni ridotte rispetto Arduino e Raspberry Pi.</span></td>
+        <td width="20%" valign="top"><img src="SX-1276.png" width="200" alt="SX 1276"><br><span style="font-size: 16px; line-height: normal;"><b>SX 1276</b><br />Il modulo con cui comunichiamo via radio. Funziona tramite il protocollo LoRa che permette di comunicare a lunghe distanze con un consumo di energia ridotto.</span></td>
+        <td width="20%" valign="top"><img src="GY-521.png" width="200" alt="GY 521"><br><span style="font-size: 16px; line-height: normal;"><b>GY 521</b><br />Accellerometro e giroscopio, ci permette di calcolare l’inclinazione del CanSat per regolare i fili del parapendio.</span></td>
+        <td width="20%" valign="top"><img src="BMP-280.png" width="200" alt="BMP 280"><br><span style="font-size: 16px; line-height: normal;"><b>BMP 280</b><br />Il sensore multifunzione che ci permette di calcolare sia la temperatura, sia la pressione atmosferica.</span></td>
+        <td width="20%" valign="top"><img src="SG90.png" width="200" alt="SG90"><br><span style="font-size: 16px; line-height: normal;"><b>SG90</b><br />Il servo motore che ci permette di modificare la lunghezza dei cavi del parapendio per controllarne l’atteraggio.</span></td>
+    </tr>
+</table>
+<br />
+<br />
+<br />
+
 
 {% endblock %}
